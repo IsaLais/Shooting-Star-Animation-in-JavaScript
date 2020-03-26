@@ -1,0 +1,133 @@
+
+var leftX = 120;
+var rightX = 300;
+
+// position of the car
+var x = 1;
+    draw = function() {
+    // all lines of code inside here will be run repeatedly
+    
+// sky
+background(6, 35, 64);
+
+    
+
+// variáveis da casa   variables for the home
+var houseX=20;
+var houseY=220;
+var housel= 150;
+var househ=85;
+
+
+
+// Rua
+
+fill(135, 125, 125);
+rect(0,310,450,500);
+
+// linha da rua
+stroke(242, 242, 5);
+strokeWeight(5);
+line(0,360,400,360);
+
+// borda da rua
+stroke(5, 4, 5);
+line(0,310,40000,360);
+
+//calçada
+stroke(94, 138, 58);
+strokeWeight(20);
+line(0,300,40000,360);
+// sombra da calçada
+stroke(58, 84, 47);
+strokeWeight(8);
+line(0,290,40000,360);
+
+//CASA
+
+// parede da frente
+stroke(15, 14, 15);
+strokeWeight(1);
+fill(224, 224, 177);
+rect(houseX,houseY,housel,househ);
+
+// profudindade da parede da frente
+
+
+fill (224, 224, 177);
+
+quad(197,296,houseX+150,305,172,212,196,216);
+
+// porta
+fill(110, 42, 6);
+rect(houseX+55,houseY+44,housel-120,housel-109);
+// Maçaneta
+fill(23, 13, 13);
+ellipse(houseX+80,houseY+65,5,5);
+
+// teto
+fill(135, 0, 0);
+quad(houseX,houseY,50,180,houseX+132,houseY-40,199,220);
+fill(8, 4, 4);
+line(151,180,170,220);
+
+// janelas
+fill(13, 6, 6);
+rect(houseX+10,houseY+20,31,20);
+rect(houseX+10,houseY+50,30,20);
+rect(houseX+105,houseY+20,30,20);
+rect(houseX+55,houseY+20,31,20);
+rect(houseX+105,houseY+50,30,20);
+
+
+//lua
+fill(239, 240, 242);
+ellipse(370,40,90,90);
+
+// buracos na lua
+fill(204, 204, 204);
+ellipse(370,63,13,21);
+ellipse(350,41,20,26);
+ellipse(381,22,10,12);
+ellipse(391,52,8,8);
+
+noStroke();
+
+    // clouds 
+    fill(255, 255, 255);
+    // left cloud
+    ellipse(leftX, 150, 126, 97);
+    ellipse(leftX+63, 151, 70, 60);
+    ellipse(leftX-62, 150, 70, 60);
+    
+    // right cloud
+    ellipse(rightX, 100, 126, 97);
+    ellipse(rightX+62, 100, 70, 60);
+    ellipse(rightX-62, 100, 70, 60);
+    
+    //Nuvens se mexendo
+    leftX-=1;
+    rightX+=1;
+    
+    
+    // draw the car body
+    fill(255, 0, 115);
+    rect(x, 300, 100, 20);
+    rect(x + 15, 270, 70, 40);
+    
+    // draw the wheels
+    fill(77, 66, 66);
+    ellipse(x + 25, 320, 24, 24);
+    ellipse(x + 75, 320, 24, 24);
+ 
+    x=x+1;
+
+};
+
+
+
+
+
+    
+
+
